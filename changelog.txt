@@ -1,0 +1,9 @@
+[B]1.0.2 (14-Sep-2016)[/B]
+- Fix for "zero 2 hero" non-playable videos
+
+[B]1.0.1 (13-Sep-2016)[/B]
+- Changed the icon a little bit
+- Added link pointing to support thread
+
+[B]1.0.0 (13-Sep-2016)[/B]
+- Initial Version
