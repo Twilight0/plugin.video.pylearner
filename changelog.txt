@@ -1,3 +1,6 @@
+[B]1.0.4 (17-Sep-2016)[/B]
+- Missed an indice for the last playlist
+
 [B]1.0.3 (17-Sep-2016)[/B]
 - New videos from Derek Banas
 - Cheat Sheet in Text Box View (next version will become colourized)
