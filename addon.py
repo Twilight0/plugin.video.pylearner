@@ -18,7 +18,7 @@
         along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
-import os, sys, urlparse, urllib
+import os, sys, urlparse, requests
 import xbmc, xbmcaddon, xbmcgui, xbmcplugin
 
 # Commands:
@@ -40,12 +40,53 @@ execute = xbmc.executebuiltin
 addon_url = sys.argv[0]
 addon_handle = int(sys.argv[1])
 
-params = urlparse.parse_qs(sys.argv[2][1:])
+params = dict(urlparse.parse_qsl(sys.argv[2][1:]))
 action = params.get('action', None)
 
 
-def action_url(query):
-    return addon_url + '?' + urllib.urlencode(query)
+def requester(url):
+
+    rq = requests.get(url)
+
+    return rq.text
+
+
+def txt_box(heading, announce):
+
+    window_id = 10147
+    control_id1 = 1
+    control_id2 = 5
+    gui_window = xbmcgui.Window(window_id)
+
+    execute('ActivateWindow(%d)' % window_id)
+    xbmc.sleep(500)
+
+    gui_window.getControl(control_id1).setLabel(heading)
+
+    try:
+        txt = open(announce)
+        text = txt.read()
+
+    except:
+        text = announce
+
+    gui_window.getControl(control_id2).setText(str(text))
+
+    return
+
+
+def txt_processor():
+
+    cs_link = 'http://pastebin.com/raw/gSWEK7Q8'
+
+    raw = requester(cs_link)
+
+    return raw
+
+
+def cheat_sheet():
+
+    txt_box('Python Cheat Sheet', txt_processor())
 
 
 items = [
@@ -170,14 +211,36 @@ items = [
          'auto':  'plugin://plugin.video.youtube/?path=/root/video&action=play_all&playlist=$PLGzru6ACxEAJu4Aa3HnOqrBfCIs_ftmeQ'
         },
         {
-         'title': 'Zero to Hero with Python Tutorial FULL - Easy Learning python 3.4 from begin to advance',
+         'title': 'Python Tutorial by Derek Banas',
+         'icon': 'https://i.ytimg.com/vi/fdv1NlEZWro/mqdefault.jpg',
+         'index': 'plugin://plugin.video.youtube/channel/UCwRXb5dUK4cvsHbx-rGzSgw/playlist/PL3072C720775B213E/',
+         'auto':  'plugin://plugin.video.youtube/?path=/root/video&action=play_all&playlist=$PL3072C720775B213E'
+        },
+        {
+         'title': 'Python Tutorial 2.7 by Derek Banas',
+         'icon': 'https://i.ytimg.com/vi/UQi-L-_chcc/mqdefault.jpg',
+         'index': 'plugin://plugin.video.youtube/channel/UCwRXb5dUK4cvsHbx-rGzSgw/playlist/PLA175E8A1816CD64B/',
+         'auto':  'plugin://plugin.video.youtube/?path=/root/video&action=play_all&playlist=$PLA175E8A1816CD64B'
+        },
+        {
+         'title': 'Zero to Hero with Python Tutorial FULL Version - Easy Learning python 3.4 from begin to advance',
          'icon': 'https://yt3.ggpht.com/-gOuki6sqKD8/AAAAAAAAAAI/AAAAAAAAAAA/bPPb2wYyOdM/s256-c-k-no-mo-rj-c0xffffff/photo.jpg',
          'url': 'plugin://plugin.video.youtube/play/?video_id=pTV6bILLP_s'
+        },
+        {
+         'title': 'Zero to Hero with Python Tutorial COMPACT Version - Easy Learning python 3.4 from begin to advance',
+         'icon': 'https://yt3.ggpht.com/-gOuki6sqKD8/AAAAAAAAAAI/AAAAAAAAAAA/bPPb2wYyOdM/s256-c-k-no-mo-rj-c0xffffff/photo.jpg',
+         'url': 'plugin://plugin.video.youtube/play/?video_id=emY34tSKXc4'
         },
         {
          'title': 'Python Programming Tutorial | Learn Python programming | Python language',
          'icon': 'https://yt3.ggpht.com/-doHjtyH8IV4/AAAAAAAAAAI/AAAAAAAAAAA/iVDcOtCdcrw/s256-c-k-no-mo-rj-c0xffffff/photo.jpg',
          'url': 'plugin://plugin.video.youtube/play/?video_id=BTzav965P7w',
+        },
+        {
+         'title': 'Long Python Programming by Derek Banas (see also cheat sheet for reference)',
+         'icon': 'https://yt3.ggpht.com/-SN1RQ4kN5bM/AAAAAAAAAAI/AAAAAAAAAAA/T39gSKk4e2g/s256-c-k-no-mo-rj-c0xffffff/photo.jpg',
+         'url': 'plugin://plugin.video.youtube/play/?video_id=N4mEzFDjqtA',
         }
         ]
 
@@ -191,6 +254,7 @@ def main_menu():
     sentex_playlists = []
     coreyschafer_playlists = []
     mastercodeonline_playlists = []
+    derekbanas_playlists = []
     z2h_videos = []
 
     ####################################################################################################################
@@ -275,36 +339,78 @@ def main_menu():
     addDirItems(addon_handle, mastercodeonline_playlists)
 
     ####################################################################################################################
+    _list_item = xbmcgui.ListItem(label='[COLOR red]Derek Banas\'s Playlists:[/COLOR]')
+    _list_item.setInfo('video', {'title': '[COLOR red]Derek Banas\'s Playlists:[/COLOR]'})
+    _list_item.setArt({'icon': 'https://yt3.ggpht.com/-SN1RQ4kN5bM/AAAAAAAAAAI/AAAAAAAAAAA/T39gSKk4e2g/s256-c-k-no-mo-rj-c0xffffff/photo.jpg', 'fanart': addonfanart})
+
+    addDirItem(handle=addon_handle, url=None, listitem=_list_item, isFolder=False)
+
+    for item in items[20:21]:
+        _list_item = xbmcgui.ListItem(label=item['title'])
+        _list_item.setInfo('video', {'title': item['title']})
+        _list_item.setArt({'icon': item['icon'], 'fanart': addonfanart})
+        _url = item['index']
+        _isFolder = True
+        derekbanas_playlists.append((_url, _list_item, _isFolder))
+
+    addDirItems(addon_handle, derekbanas_playlists)
+
+    ####################################################################################################################
     _list_item = xbmcgui.ListItem(label='[COLOR red]Zero-to-Hero one-time long videos:[/COLOR]')
     _list_item.setInfo('video', {'title': '[COLOR red]Zero-to-Hero one-time long videos:[/COLOR]'})
     _list_item.setArt({'icon': addonicon, 'fanart': addonfanart})
 
     addDirItem(handle=addon_handle, url=None, listitem=_list_item, isFolder=False)
 
-    for item in items[20:]:
+    for item in items[22:]:
         _list_item = xbmcgui.ListItem(label=item['title'])
         _list_item.setInfo('video', {'title': item['title']})
         _list_item.setArt({'icon': item['icon'], 'fanart': addonfanart})
-        _url = action_url({'action': 'play', 'item': item['url']})
+        _list_item.setProperty('IsPlayable', 'true')
+        _url = '{0}?action=play&item={1}'.format(addon_url, item['url'])
+        # _url = item['url']
         _isFolder = False
         z2h_videos.append((_url, _list_item, _isFolder))
 
     addDirItems(addon_handle, z2h_videos)
 
     ####################################################################################################################
+
+    _list_item = xbmcgui.ListItem(label='[COLOR blue]Python Cheatsheet[/COLOR]')
+    _list_item.setInfo('video', {'title': '[COLOR blue]Python Cheatsheet[/COLOR]'})
+    _list_item.setArt({'icon': 'http://www.phidgets.com/wiki/images/e/e5/Icon-Python.png', 'fanart': addonfanart})
+    _url = '{0}?action=pycheat'.format(addon_url)
+
+    addDirItem(handle=addon_handle, url=_url, listitem=_list_item, isFolder=False)
+
     endDir(addon_handle)
+
+
+def play_item(url):
+    _play_item = xbmcgui.ListItem(path=url)
+    xbmcplugin.setResolvedUrl(addon_handle, True, listitem=_play_item)
 
 
 if action is None:
     main_menu()
 
-elif action[0] == 'play':
+elif action == 'play':
 
-    url = params['item'][0]
+    play_item(params['item'])
 
-    if url == items[20]['url']:
+    url = params['item']
+
+    if url == items[22]['url']:
         execute('Playmedia("plugin://plugin.video.youtube/play/?video_id=pTV6bILLP_s")')
 
-    elif url == items[21]['url']:
+    elif url == items[23]['url']:
+        execute('Playmedia("plugin://plugin.video.youtube/play/?video_id=emY34tSKXc4")')
+
+    elif url == items[24]['url']:
         execute('Playmedia("plugin://plugin.video.youtube/play/?video_id=BTzav965P7w")')
 
+    elif url == items[25]['url']:
+        execute('Playmedia("plugin://plugin.video.youtube/play/?video_id=N4mEzFDjqtA")')
+
+elif action == 'pycheat':
+    cheat_sheet()

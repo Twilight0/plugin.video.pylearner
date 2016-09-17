@@ -1,3 +1,8 @@
+[B]1.0.3 (17-Sep-2016)[/B]
+- New videos from Derek Banas
+- Cheat Sheet in Text Box View (next version will become colourized)
+- Changed plugin call parameters
+
 [B]1.0.2 (14-Sep-2016)[/B]
 - Fix for "zero 2 hero" non-playable videos
 
