@@ -345,7 +345,7 @@ def main_menu():
 
     addDirItem(handle=addon_handle, url=None, listitem=_list_item, isFolder=False)
 
-    for item in items[20:21]:
+    for item in items[20:22]:
         _list_item = xbmcgui.ListItem(label=item['title'])
         _list_item.setInfo('video', {'title': item['title']})
         _list_item.setArt({'icon': item['icon'], 'fanart': addonfanart})
