@@ -93,134 +93,112 @@ items = [
         {
          'title': 'Python Programming Tutorials',
          'icon': 'https://i.ytimg.com/vi/DkW5CSZ_VII/mqdefault.jpg',
-         'index': 'plugin://plugin.video.youtube/channel/UCJbPGzawDH1njbqV-D5HqKw/playlist/PLEA1FEF17E1E5C0DA/',
-         'auto':  'plugin://plugin.video.youtube/?path=/root/video&action=play_all&playlist=$PLEA1FEF17E1E5C0DA'
+         'index': 'plugin://plugin.video.youtube/channel/UCJbPGzawDH1njbqV-D5HqKw/playlist/PLEA1FEF17E1E5C0DA/'
         },
         {
          'title': 'Python 3.4 Programming Tutorials',
          'icon': 'https://i.ytimg.com/vi/HBxCHonP6Ro/mqdefault.jpg',
-         'index': 'plugin://plugin.video.youtube/channel/UCJbPGzawDH1njbqV-D5HqKw/playlist/PL6gx4Cwl9DGAcbMi1sH6oAMk4JHw91mC_/',
-         'auto':  'plugin://plugin.video.youtube/?path=/root/video&action=play_all&playlist=$PL6gx4Cwl9DGAcbMi1sH6oAMk4JHw91mC_'
+         'index': 'plugin://plugin.video.youtube/channel/UCJbPGzawDH1njbqV-D5HqKw/playlist/PL6gx4Cwl9DGAcbMi1sH6oAMk4JHw91mC_/'
         },
         {
          'title': 'Pygame (Python Game Development) Playlist',
          'icon': 'https://i.ytimg.com/vi/K5F-aGDIYaM/mqdefault.jpg',
-         'index': 'plugin://plugin.video.youtube/channel/UCJbPGzawDH1njbqV-D5HqKw/playlist/PL6gx4Cwl9DGAjkwJocj7vlc_mFU-4wXJq/',
-         'auto':  'plugin://plugin.video.youtube/?path=/root/video&action=play_all&playlist=$PL6gx4Cwl9DGAjkwJocj7vlc_mFU-4wXJq'
+         'index': 'plugin://plugin.video.youtube/channel/UCJbPGzawDH1njbqV-D5HqKw/playlist/PL6gx4Cwl9DGAjkwJocj7vlc_mFU-4wXJq/'
         },
         {
          'title': 'Python GUI Development with GTK+ 3',
          'icon': 'https://i.ytimg.com/vi/0O11oEp7QYw/mqdefault.jpg',
-         'index': 'plugin://plugin.video.youtube/channel/UCJbPGzawDH1njbqV-D5HqKw/playlist/PL6gx4Cwl9DGBBnHFDEANbv9q8T4CONGZE/',
-         'auto':  'plugin://plugin.video.youtube/?path=/root/video&action=play_all&playlist=$PL6gx4Cwl9DGBBnHFDEANbv9q8T4CONGZE'
+         'index': 'plugin://plugin.video.youtube/channel/UCJbPGzawDH1njbqV-D5HqKw/playlist/PL6gx4Cwl9DGBBnHFDEANbv9q8T4CONGZE/'
         },
         {
          'title': 'Python GUI with Tkinter Playlist',
          'icon': 'https://i.ytimg.com/vi/RJB1Ek2Ko_Y/mqdefault.jpg',
-         'index': 'plugin://plugin.video.youtube/channel/UCJbPGzawDH1njbqV-D5HqKw/playlist/PL6gx4Cwl9DGBwibXFtPtflztSNPGuIB_d/',
-         'auto':  'plugin://plugin.video.youtube/?path=/root/video&action=play_all&playlist=$PL6gx4Cwl9DGBwibXFtPtflztSNPGuIB_d'
+         'index': 'plugin://plugin.video.youtube/channel/UCJbPGzawDH1njbqV-D5HqKw/playlist/PL6gx4Cwl9DGBwibXFtPtflztSNPGuIB_d/'
         },
         {
          'title': 'Python Basic Tutorials',
          'icon': 'https://i.ytimg.com/vi/mk4625XRkwU/mqdefault.jpg',
-         'index': 'plugin://plugin.video.youtube/channel/UCfzlCWGWYyIQ0aLC5w48gBQ/playlist/PLQVvvaa0QuDdFqJtqsyeEewqVm_7VRrlD/',
-         'auto':  'plugin://plugin.video.youtube/?path=/root/video&action=play_all&playlist=$PLQVvvaa0QuDdFqJtqsyeEewqVm_7VRrlD'
+         'index': 'plugin://plugin.video.youtube/channel/UCfzlCWGWYyIQ0aLC5w48gBQ/playlist/PLQVvvaa0QuDdFqJtqsyeEewqVm_7VRrlD/'
         },
         {
          'title': 'Intermediate Python Tutorials',
          'icon': 'https://i.ytimg.com/vi/8PzDfykGg_g/mqdefault.jpg',
-         'index': 'plugin://plugin.video.youtube/channel/UCfzlCWGWYyIQ0aLC5w48gBQ/playlist/PLQVvvaa0QuDfhTF3Zfyzc_yD-Mq9iTp4G/',
-         'auto':  'plugin://plugin.video.youtube/?path=/root/video&action=play_all&playlist=$PLQVvvaa0QuDfhTF3Zfyzc_yD-Mq9iTp4G'
+         'index': 'plugin://plugin.video.youtube/channel/UCfzlCWGWYyIQ0aLC5w48gBQ/playlist/PLQVvvaa0QuDfhTF3Zfyzc_yD-Mq9iTp4G/'
         },
         {
          'title': 'Python 3 Basics Tutorial Series ',
          'icon': 'https://i.ytimg.com/vi/IX6mc9l6tY4/mqdefault.jpg',
-         'index': 'plugin://plugin.video.youtube/channel/UCfzlCWGWYyIQ0aLC5w48gBQ/playlist/PLQVvvaa0QuDe8XSftW-RAxdo6OmaeL85M/',
-         'auto':  'plugin://plugin.video.youtube/?path=/root/video&action=play_all&playlist=$PLQVvvaa0QuDe8XSftW-RAxdo6OmaeL85M'
+         'index': 'plugin://plugin.video.youtube/channel/UCfzlCWGWYyIQ0aLC5w48gBQ/playlist/PLQVvvaa0QuDe8XSftW-RAxdo6OmaeL85M/'
         },
         {
          'title': 'Pygame - Making Games with Python',
          'icon': 'https://i.ytimg.com/vi/Y7joZ67mC6o/mqdefault.jpg',
-         'index': 'plugin://plugin.video.youtube/channel/UCfzlCWGWYyIQ0aLC5w48gBQ/playlist/PLQVvvaa0QuDcxG_Cajz1JyTH6eAvka93C/',
-         'auto':  'plugin://plugin.video.youtube/?path=/root/video&action=play_all&playlist=$PLQVvvaa0QuDcxG_Cajz1JyTH6eAvka93C'
+         'index': 'plugin://plugin.video.youtube/channel/UCfzlCWGWYyIQ0aLC5w48gBQ/playlist/PLQVvvaa0QuDcxG_Cajz1JyTH6eAvka93C/'
         },
         {
          'title': 'wxPython: Making Windows / GUIs for user-friendliness',
          'icon': 'https://i.ytimg.com/vi/NMjV_HGLAQE/mqdefault.jpg',
-         'index': 'plugin://plugin.video.youtube/channel/UCEpe5DhhS0HYFBaCVsU2Iwg/playlist/PLQVvvaa0QuDc4SQhfpm6XHO0l-1Ybtur2/',
-         'auto':  'plugin://plugin.video.youtube/?path=/root/video&action=play_all&playlist=$PLQVvvaa0QuDc4SQhfpm6XHO0l-1Ybtur2'
+         'index': 'plugin://plugin.video.youtube/channel/UCEpe5DhhS0HYFBaCVsU2Iwg/playlist/PLQVvvaa0QuDc4SQhfpm6XHO0l-1Ybtur2/'
         },
         {
          'title': 'PyQT Python GUI Application Development with Python',
          'icon': 'https://i.ytimg.com/vi/JBME1ZyHiP8/mqdefault.jpg',
-         'index': 'plugin://plugin.video.youtube/channel/UCEpe5DhhS0HYFBaCVsU2Iwg/playlist/PLQVvvaa0QuDdVpDFNq4FwY9APZPGSUyR4/',
-         'auto':  'plugin://plugin.video.youtube/?path=/root/video&action=play_all&playlist=$PLQVvvaa0QuDdVpDFNq4FwY9APZPGSUyR4'
+         'index': 'plugin://plugin.video.youtube/channel/UCEpe5DhhS0HYFBaCVsU2Iwg/playlist/PLQVvvaa0QuDdVpDFNq4FwY9APZPGSUyR4/'
         },
         {
          'title': 'Python Tutorials',
          'icon': 'https://i.ytimg.com/vi/FsAPt_9Bf3U/mqdefault.jpg',
-         'index': 'plugin://plugin.video.youtube/channel/UCCezIgC97PvUuR4_gbFUs5g/playlist/PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU/',
-         'auto':  'plugin://plugin.video.youtube/?path=/root/video&action=play_all&playlist=$PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU'
+         'index': 'plugin://plugin.video.youtube/channel/UCCezIgC97PvUuR4_gbFUs5g/playlist/PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU/'
         },
         {
          'title': 'Python OOP Tutorials - Working with Classes',
          'icon': 'https://i.ytimg.com/vi/ZDa-Z5JzLYM/mqdefault.jpg',
-         'index': 'plugin://plugin.video.youtube/channel/UCCezIgC97PvUuR4_gbFUs5g/playlist/PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc/',
-         'auto':  'plugin://plugin.video.youtube/?path=/root/video&action=play_all&playlist=$PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc'
+         'index': 'plugin://plugin.video.youtube/channel/UCCezIgC97PvUuR4_gbFUs5g/playlist/PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc/'
         },
         {
          'title': 'Python - Setting up a Python Environment',
          'icon': 'https://i.ytimg.com/vi/YJC6ldI3hWk/mqdefault.jpg',
-         'index': 'plugin://plugin.video.youtube/channel/UCCezIgC97PvUuR4_gbFUs5g/playlist/PL-osiE80TeTt66h8cVpmbayBKlMTuS55y/',
-         'auto':  'plugin://plugin.video.youtube/?path=/root/video&action=play_all&playlist=$PL-osiE80TeTt66h8cVpmbayBKlMTuS55y'
+         'index': 'plugin://plugin.video.youtube/channel/UCCezIgC97PvUuR4_gbFUs5g/playlist/PL-osiE80TeTt66h8cVpmbayBKlMTuS55y/'
         },
         {
          'title': 'Python Tutorial for Beginners (For Absolute Beginners)',
          'icon': 'https://i.ytimg.com/vi/41qgdwd3zAg/mqdefault.jpg',
-         'index': 'plugin://plugin.video.youtube/channel/UCs6nmQViDpUw0nuIx9c_WvA/playlist/PLS1QulWo1RIaJECMeUT4LFwJ-ghgoSH6n/',
-         'auto':  'plugin://plugin.video.youtube/?path=/root/video&action=play_all&playlist=$PLS1QulWo1RIaJECMeUT4LFwJ-ghgoSH6n'
+         'index': 'plugin://plugin.video.youtube/channel/UCs6nmQViDpUw0nuIx9c_WvA/playlist/PLS1QulWo1RIaJECMeUT4LFwJ-ghgoSH6n/'
         },
         {
          'title': 'Python Tutorials',
          'icon': 'https://i.ytimg.com/vi/P74JAYCD45A/mqdefault.jpg',
-         'index': 'plugin://plugin.video.youtube/channel/UCbhm6TbMBTWn_GxrIbPFapA/playlist/PLGzru6ACxEALhcvY18A-iox-mEoieHMVG/',
-         'auto':  'plugin://plugin.video.youtube/?path=/root/video&action=play_all&playlist=$PLGzru6ACxEALhcvY18A-iox-mEoieHMVG'
+         'index': 'plugin://plugin.video.youtube/channel/UCbhm6TbMBTWn_GxrIbPFapA/playlist/PLGzru6ACxEALhcvY18A-iox-mEoieHMVG/'
         },
         {
          'title': 'Pro Python Programming Course',
          'icon': 'https://i.ytimg.com/vi/fKO32pt6CpE/mqdefault.jpg',
-         'index': 'plugin://plugin.video.youtube/channel/UCbhm6TbMBTWn_GxrIbPFapA/playlist/PLGzru6ACxEAKorNc8bMhv2vTa0qGbjBcD/',
-         'auto':  'plugin://plugin.video.youtube/?path=/root/video&action=play_all&playlist=$PLGzru6ACxEAKorNc8bMhv2vTa0qGbjBcD'
+         'index': 'plugin://plugin.video.youtube/channel/UCbhm6TbMBTWn_GxrIbPFapA/playlist/PLGzru6ACxEAKorNc8bMhv2vTa0qGbjBcD/'
         },
         {
          'title': 'Python Glossary',
          'icon': 'https://i.ytimg.com/vi/5aS8oIm2CoA/mqdefault.jpg',
-         'index': 'plugin://plugin.video.youtube/channel/UCbhm6TbMBTWn_GxrIbPFapA/playlist/PLGzru6ACxEAI40_BjeVIboIzlmgRv4RuL/',
-         'auto':  'plugin://plugin.video.youtube/?path=/root/video&action=play_all&playlist=$PLGzru6ACxEAI40_BjeVIboIzlmgRv4RuL'
+         'index': 'plugin://plugin.video.youtube/channel/UCbhm6TbMBTWn_GxrIbPFapA/playlist/PLGzru6ACxEAI40_BjeVIboIzlmgRv4RuL/'
         },
         {
          'title': 'Learn Python 3 By Example',
          'icon': 'https://i.ytimg.com/vi/Ov125thke0s/mqdefault.jpg',
-         'index': 'plugin://plugin.video.youtube/channel/UCbhm6TbMBTWn_GxrIbPFapA/playlist/PLGzru6ACxEAISepi3SZ-doH9MJ8XNYLTQ/',
-         'auto':  'plugin://plugin.video.youtube/?path=/root/video&action=play_all&playlist=$PLGzru6ACxEAISepi3SZ-doH9MJ8XNYLTQ'
+         'index': 'plugin://plugin.video.youtube/channel/UCbhm6TbMBTWn_GxrIbPFapA/playlist/PLGzru6ACxEAISepi3SZ-doH9MJ8XNYLTQ/'
         },
         {
          'title': 'Python GUI',
          'icon': 'https://i.ytimg.com/vi/hKvphf5L5L4/mqdefault.jpg',
-         'index': 'plugin://plugin.video.youtube/channel/UCbhm6TbMBTWn_GxrIbPFapA/playlist/PLGzru6ACxEAJu4Aa3HnOqrBfCIs_ftmeQ/',
-         'auto':  'plugin://plugin.video.youtube/?path=/root/video&action=play_all&playlist=$PLGzru6ACxEAJu4Aa3HnOqrBfCIs_ftmeQ'
+         'index': 'plugin://plugin.video.youtube/channel/UCbhm6TbMBTWn_GxrIbPFapA/playlist/PLGzru6ACxEAJu4Aa3HnOqrBfCIs_ftmeQ/'
         },
         {
          'title': 'Python Tutorial by Derek Banas',
          'icon': 'https://i.ytimg.com/vi/fdv1NlEZWro/mqdefault.jpg',
-         'index': 'plugin://plugin.video.youtube/channel/UCwRXb5dUK4cvsHbx-rGzSgw/playlist/PL3072C720775B213E/',
-         'auto':  'plugin://plugin.video.youtube/?path=/root/video&action=play_all&playlist=$PL3072C720775B213E'
+         'index': 'plugin://plugin.video.youtube/channel/UCwRXb5dUK4cvsHbx-rGzSgw/playlist/PL3072C720775B213E/'
         },
         {
          'title': 'Python Tutorial 2.7 by Derek Banas',
          'icon': 'https://i.ytimg.com/vi/UQi-L-_chcc/mqdefault.jpg',
-         'index': 'plugin://plugin.video.youtube/channel/UCwRXb5dUK4cvsHbx-rGzSgw/playlist/PLA175E8A1816CD64B/',
-         'auto':  'plugin://plugin.video.youtube/?path=/root/video&action=play_all&playlist=$PLA175E8A1816CD64B'
+         'index': 'plugin://plugin.video.youtube/channel/UCwRXb5dUK4cvsHbx-rGzSgw/playlist/PLA175E8A1816CD64B/'
         },
         {
          'title': 'Zero to Hero with Python Tutorial FULL Version - Easy Learning python 3.4 from begin to advance',
@@ -242,9 +220,32 @@ items = [
          'icon': 'https://yt3.ggpht.com/-SN1RQ4kN5bM/AAAAAAAAAAI/AAAAAAAAAAA/T39gSKk4e2g/s256-c-k-no-mo-rj-c0xffffff/photo.jpg',
          'url': 'plugin://plugin.video.youtube/play/?video_id=N4mEzFDjqtA',
         }
+        ,
+        {
+         'title': 'Kodi Video Plugin Development',
+         'icon': 'https://i.ytimg.com/vi/C8fXX9zmcBo/mqdefault.jpg',
+         'index': 'plugin://plugin.video.youtube/channel/UCh02D9eMOM-UkP1Q9PI9SaQ/playlist/PLiis1tMhz6fgDcZZhToOOGgQu7voDoFv0/'
+        }
+        ,
+        {
+         'title': 'Kodi Wizard Plugin Development',
+         'icon': 'https://i.ytimg.com/vi/dGzMHJB5xVM/mqdefault.jpg',
+         'index': 'plugin://plugin.video.youtube/channel/UCh02D9eMOM-UkP1Q9PI9SaQ/playlist/PLiis1tMhz6fhR1da972N3IJCI9Gha1MqG/'
+        }
+        ,
+        {
+         'title': 'Kodi GUI addon Development',
+         'icon': 'https://i.ytimg.com/vi/AkOAmWHLmKY/mqdefault.jpg',
+         'index': 'plugin://plugin.video.youtube/channel/UCh02D9eMOM-UkP1Q9PI9SaQ/playlist/PLiis1tMhz6fhq_x8SpUiFj6o0BQ1qW8JR/'
+        }
+        ,
+        {
+         'title': 'Create your own Kodi addon in one video (tutorial)',
+         'icon': 'https://i.ytimg.com/vi/DfDSqSJ2Z44/mqdefault.jpg',
+         'url': 'plugin://plugin.video.youtube/play/?video_id=DfDSqSJ2Z44'
+        }
         ]
-
-
+print list(enumerate(items))
 # Build Root Menu:
 def main_menu():
 
@@ -256,6 +257,7 @@ def main_menu():
     mastercodeonline_playlists = []
     derekbanas_playlists = []
     z2h_videos = []
+    kodification_playlists = []
 
     ####################################################################################################################
     _list_item = xbmcgui.ListItem(label='[COLOR red]Bucky - "The new Boston" playlists:[/COLOR]')
@@ -362,7 +364,7 @@ def main_menu():
 
     addDirItem(handle=addon_handle, url=None, listitem=_list_item, isFolder=False)
 
-    for item in items[22:]:
+    for item in items[22:25]:
         _list_item = xbmcgui.ListItem(label=item['title'])
         _list_item.setInfo('video', {'title': item['title']})
         _list_item.setArt({'icon': item['icon'], 'fanart': addonfanart})
@@ -381,6 +383,31 @@ def main_menu():
     _list_item.setArt({'icon': 'http://www.phidgets.com/wiki/images/e/e5/Icon-Python.png', 'fanart': addonfanart})
     _url = '{0}?action=pycheat'.format(addon_url)
 
+    addDirItem(handle=addon_handle, url=_url, listitem=_list_item, isFolder=False)
+
+    ####################################################################################################################
+
+    _list_item = xbmcgui.ListItem(label='[COLOR red]Kodification\'s Playlists:[/COLOR]')
+    _list_item.setInfo('video', {'title': '[COLOR red]Kodification\'s Playlists:[/COLOR]'})
+    _list_item.setArt({'icon': 'https://yt3.ggpht.com/-Ovt6pXu-Les/AAAAAAAAAAI/AAAAAAAAAAA/VUtFGestlI4/s256-c-k-no-mo-rj-c0xffffff/photo.jpg', 'fanart': addonfanart})
+    addDirItem(handle=addon_handle, url=None, listitem=_list_item, isFolder=False)
+
+    for item in items[26:29]:
+        _list_item = xbmcgui.ListItem(label=item['title'])
+        _list_item.setInfo('video', {'title': item['title']})
+        _list_item.setArt({'icon': item['icon'], 'fanart': addonfanart})
+        _list_item.setProperty('IsPlayable', 'true')
+        # _url = '{0}?action=play&item={1}'.format(addon_url, item['url'])
+        _url = item['index']
+        _isFolder = True
+        kodification_playlists.append((_url, _list_item, _isFolder))
+
+    addDirItems(addon_handle, kodification_playlists)
+
+    _list_item = xbmcgui.ListItem(label=items[29]['title'])
+    _list_item.setInfo('video', {'title': items[29]['title']})
+    _list_item.setArt({'icon': items[29]['icon'], 'fanart': addonfanart})
+    _url = '{0}?action=play&item={1}'.format(addon_url, items[29]['url'])
     addDirItem(handle=addon_handle, url=_url, listitem=_list_item, isFolder=False)
 
     endDir(addon_handle)
@@ -411,6 +438,9 @@ elif action == 'play':
 
     elif url == items[25]['url']:
         execute('Playmedia("plugin://plugin.video.youtube/play/?video_id=N4mEzFDjqtA")')
+
+    elif url == items[29]['url']:
+        execute('Playmedia("plugin://plugin.video.youtube/play/?video_id=DfDSqSJ2Z44")')
 
 elif action == 'pycheat':
     cheat_sheet()
