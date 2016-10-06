@@ -1,3 +1,6 @@
+[B]1.0.6 (06-Oct-2016)[/B]
+- Missed an indice
+
 [B]1.0.5 (26-Sep-2016)[/B]
 - Added playlists from Kodification
 - Removed "auto" key-value pairs from items as I am not going to use after all.
