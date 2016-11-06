@@ -1,3 +1,12 @@
+[B]1.1.0 (05-Nov-2016)[/B]
+- Removed requests dependency
+- Items list is now hosted remotely to allow easy changes and it is loaded with parsedom
+- Main menu code rework
+- Actions code rework
+- Added TotalRevolution's playlists
+- Various bug fixes
+- Compatible as Jarvis and above
+
 [B]1.0.6 (06-Oct-2016)[/B]
 - Missed an indice
 
