@@ -20,6 +20,7 @@
 
 import os, sys, urlparse, urllib2
 import xbmc, xbmcaddon, xbmcgui, xbmcplugin
+import CommonFunctions as common
 
 
 # Commands:
@@ -46,8 +47,9 @@ action = params.get('action', None)
 
 
 def opener(url):
+
     requester = urllib2.Request(url)
-    requester.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+    requester.add_header('User-Agent', 'Mozilla/5.0 (msie 11.0; windows nt 6.2 ; Trident/7.0; rv:11.0) like Gecko')
     response = urllib2.urlopen(requester)
     result = response.read()
     response.close()
@@ -86,8 +88,6 @@ def cheat_sheet(cs_link):
 
 
 def constructor():
-
-    import CommonFunctions as common
 
     main = []
 
