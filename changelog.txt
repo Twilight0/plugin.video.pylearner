@@ -1,3 +1,7 @@
+[B]1.1.1 (06-Nov-2016)[/B]
+- Small fix for directly playable youtube videos.
+- Replace method introduced allowing easier manipulation of remote playlists
+
 [B]1.1.0 (05-Nov-2016)[/B]
 - Removed requests dependency
 - Items list is now hosted remotely to allow easy changes and it is loaded with parsedom

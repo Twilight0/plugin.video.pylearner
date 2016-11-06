@@ -101,7 +101,7 @@ def constructor():
         url = common.parseDOM(item, 'url')
         _type_ = common.parseDOM(item, 'type')
 
-        item_data = ({'title': title[0], 'icon': addonicon if icon[0] == '' else icon[0], 'url': url[0], "type": str(_type_).strip('[]\'u')})
+        item_data = ({'title': title[0], 'icon': addonicon if icon[0] == '' else icon[0], 'url': url[0].replace('https://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/play/?video_id=').replace('https://www.youtube.com/channel', 'plugin://plugin.video.youtube/channel'), "type": str(_type_).strip('[]\'u')})
         main.append(item_data)
 
     return main
@@ -129,7 +129,7 @@ def main_menu():
         elif item['type'] == 'video':
             url = '{0}?action=play&url={1}'.format(addon_url, item['url'])
             isFolder = False
-            list_item.setProperty('IsPlayable', 'true')
+            list_item.setProperty('IsPlayable', 'false')
         elif item['type'] == 'index':
             url = item['url']
             isFolder = True
