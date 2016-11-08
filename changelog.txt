@@ -1,3 +1,9 @@
+[B]1.2.0 (08-Nov-2016)[/B]
+- Utilizing urlresolver for directly playable Youtube streams
+  > Removed replace method for above mentioned streams
+  > Replaced PlayMedia call with urlresolver for playing above mentioned streams
+- Colourized cheatsheet output
+
 [B]1.1.1 (06-Nov-2016)[/B]
 - Small fix for directly playable youtube videos.
 - Replace method introduced allowing easier manipulation of remote playlists

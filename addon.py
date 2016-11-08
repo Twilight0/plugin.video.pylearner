@@ -21,7 +21,7 @@
 import os, sys, urlparse, urllib2
 import xbmc, xbmcaddon, xbmcgui, xbmcplugin
 import CommonFunctions as common
-
+import urlresolver
 
 # Commands:
 join = os.path.join
@@ -101,7 +101,9 @@ def constructor():
         url = common.parseDOM(item, 'url')
         _type_ = common.parseDOM(item, 'type')
 
-        item_data = ({'title': title[0], 'icon': addonicon if icon[0] == '' else icon[0], 'url': url[0].replace('https://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/play/?video_id=').replace('https://www.youtube.com/channel', 'plugin://plugin.video.youtube/channel'), "type": str(_type_).strip('[]\'u')})
+        item_data = ({'title': title[0], 'icon': addonicon if icon[0] == '' else icon[0], 'url': url[0].
+                     replace('https://www.youtube.com/channel', 'plugin://plugin.video.youtube/channel'),
+                     "type": str(_type_).strip('[]\'u')})
         main.append(item_data)
 
     return main
@@ -112,6 +114,9 @@ def main_menu():
 
     xbmc.executebuiltin('Container.SetViewMode(50)')
 
+    if xbmc.Player().onPlayBackEnded():
+        xbmc.executebuiltin('Container.Refresh')
+
     item_list = []
 
     items = constructor()
@@ -120,24 +125,25 @@ def main_menu():
 
         list_item = xbmcgui.ListItem(label=item['title'])
         list_item.setInfo('video', {'title': item['title']})
-        list_item.setArt({'icon': item['icon'], 'fanart': addonfanart})
+        list_item.setArt({'icon': item['icon'], 'thumb': item['icon'], 'fanart': addonfanart})
 
         if item['type'] == 'sep':
             url = None
             isFolder = False
-            list_item.setProperty('IsPlayable', 'false')
+
         elif item['type'] == 'video':
+            list_item.setProperty('IsPlayable', 'true')
             url = '{0}?action=play&url={1}'.format(addon_url, item['url'])
             isFolder = False
-            list_item.setProperty('IsPlayable', 'false')
+
         elif item['type'] == 'index':
             url = item['url']
             isFolder = True
-            list_item.setProperty('IsPlayable', 'false')
+
         elif item['type'] == 'pycheat':
             url = '{0}?action=pycheat&url={1}'.format(addon_url, item['url'])
             isFolder = False
-            list_item.setProperty('IsPlayable', 'false')
+
         else:
             url = None
             isFolder = False
@@ -147,13 +153,17 @@ def main_menu():
     addDirItems(addon_handle, item_list)
     endDir(addon_handle)
 
+def play_item(path):
+    list_item = xbmcgui.ListItem(path=path)
+    xbmcplugin.setResolvedUrl(addon_handle, True, listitem=list_item)
 
 if action is None:
     main_menu()
 
 elif action == 'play':
 
-    execute('Playmedia("{0}")'.format(params['url']))
+    url = urlresolver.resolve(params['url'])
+    play_item(url)
 
 elif action == 'pycheat':
 
