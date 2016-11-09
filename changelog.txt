@@ -1,3 +1,7 @@
+[B]1.2.1 (08-Nov-2016)[/B]
+- Removed urlresolver and used youtube-dl instead. Faster resolving
+- Re-fixed full screen video titling and thumbnail.
+
 [B]1.2.0 (08-Nov-2016)[/B]
 - Utilizing urlresolver for directly playable Youtube streams
   > Removed replace method for above mentioned streams

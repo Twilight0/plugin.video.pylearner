@@ -21,7 +21,7 @@
 import os, sys, urlparse, urllib2
 import xbmc, xbmcaddon, xbmcgui, xbmcplugin
 import CommonFunctions as common
-import urlresolver
+import YDStreamExtractor
 
 # Commands:
 join = os.path.join
@@ -114,9 +114,6 @@ def main_menu():
 
     xbmc.executebuiltin('Container.SetViewMode(50)')
 
-    if xbmc.Player().onPlayBackEnded():
-        xbmc.executebuiltin('Container.Refresh')
-
     item_list = []
 
     items = constructor()
@@ -153,8 +150,17 @@ def main_menu():
     addDirItems(addon_handle, item_list)
     endDir(addon_handle)
 
-def play_item(path):
+
+def play_item(path, name, icon):
+
+    plot = """Python is a widely used high-level, general-purpose, interpreted, dynamic programming language. Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines of code than possible in languages such as C++ or Java. The language provides constructs intended to enable writing clear programs on both a small and large scale.
+Python supports multiple programming paradigms, including object-oriented, imperative and functional programming or procedural styles. It features a dynamic type system and automatic memory management and has a large and comprehensive standard library.
+Python interpreters are available for many operating systems, allowing Python code to run on a wide variety of systems. Using third-party tools, such as Py2exe or Pyinstaller, Python code can be packaged into stand-alone executable programs for some of the most popular operating systems, so Python-based software can be distributed to, and used on, those environments with no need to install a Python interpreter.
+Above description was taken from wikipedia: https://en.wikipedia.org/wiki/Python_(programming_language)"""
+
     list_item = xbmcgui.ListItem(path=path)
+    list_item.setInfo('video', {'title': name, 'plot': plot})
+    list_item.setArt({'thumb': icon})
     xbmcplugin.setResolvedUrl(addon_handle, True, listitem=list_item)
 
 if action is None:
@@ -162,8 +168,12 @@ if action is None:
 
 elif action == 'play':
 
-    url = urlresolver.resolve(params['url'])
-    play_item(url)
+    stream = YDStreamExtractor.getVideoInfo(params['url'])
+    url = stream.streamURL()
+    title = stream.selectedStream()['title']
+    thumb = stream.selectedStream()['thumbnail']
+    #plot = stream.selectedStream()['description']
+    play_item(url, title, thumb)
 
 elif action == 'pycheat':
 
