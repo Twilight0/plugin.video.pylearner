@@ -131,7 +131,6 @@ def main_menu():
 
         elif item['type'] == 'video':
             # url = item['url']
-            list_item.setProperty('IsPlayable', 'true')
             url = '{0}?action=play&url={1}'.format(addon_url, item['url'])
             isFolder = False
 
