@@ -21,7 +21,7 @@
 import os, sys, urlparse, urllib2
 import xbmc, xbmcaddon, xbmcgui, xbmcplugin
 import CommonFunctions as common
-import YDStreamExtractor
+# import YDStreamExtractor
 
 # Commands:
 join = os.path.join
@@ -102,7 +102,8 @@ def constructor():
         _type_ = common.parseDOM(item, 'type')
 
         item_data = ({'title': title[0], 'icon': addonicon if icon[0] == '' else icon[0], 'url': url[0].
-                     replace('https://www.youtube.com/channel', 'plugin://plugin.video.youtube/channel'),
+                     replace('https://www.youtube.com/channel', 'plugin://plugin.video.youtube/channel').
+                     replace('https://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/play/?video_id='),
                      "type": str(_type_).strip('[]\'u')})
         main.append(item_data)
 
@@ -120,15 +121,16 @@ def main_menu():
 
     for item in items:
 
-        list_item = xbmcgui.ListItem(label=item['title'])
+        list_item = xbmcgui.ListItem(label=item['title'], iconImage=item['icon'])
         list_item.setInfo('video', {'title': item['title']})
-        list_item.setArt({'icon': item['icon'], 'thumb': item['icon'], 'fanart': addonfanart})
+        list_item.setArt({'thumb': item['icon'], 'fanart': addonfanart})
 
         if item['type'] == 'sep':
-            url = None
+            url = addon_url
             isFolder = False
 
         elif item['type'] == 'video':
+            # url = item['url']
             list_item.setProperty('IsPlayable', 'true')
             url = '{0}?action=play&url={1}'.format(addon_url, item['url'])
             isFolder = False
@@ -142,38 +144,44 @@ def main_menu():
             isFolder = False
 
         else:
-            url = None
+            url = addon_url
             isFolder = False
 
         item_list.append((url, list_item, isFolder))
 
     addDirItems(addon_handle, item_list)
-    endDir(addon_handle)
+    endDir(addon_handle, cacheToDisc=False)
 
 
-def play_item(path, name, icon):
-
-    plot = """Python is a widely used high-level, general-purpose, interpreted, dynamic programming language. Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines of code than possible in languages such as C++ or Java. The language provides constructs intended to enable writing clear programs on both a small and large scale.
-Python supports multiple programming paradigms, including object-oriented, imperative and functional programming or procedural styles. It features a dynamic type system and automatic memory management and has a large and comprehensive standard library.
-Python interpreters are available for many operating systems, allowing Python code to run on a wide variety of systems. Using third-party tools, such as Py2exe or Pyinstaller, Python code can be packaged into stand-alone executable programs for some of the most popular operating systems, so Python-based software can be distributed to, and used on, those environments with no need to install a Python interpreter.
-Above description was taken from wikipedia: https://en.wikipedia.org/wiki/Python_(programming_language)"""
-
-    list_item = xbmcgui.ListItem(path=path)
-    list_item.setInfo('video', {'title': name, 'plot': plot})
-    list_item.setArt({'thumb': icon})
-    xbmcplugin.setResolvedUrl(addon_handle, True, listitem=list_item)
+# def play_item(path, name, icon):
+#
+#     plot = """Python is a widely used high-level, general-purpose, interpreted, dynamic programming language.
+#     Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines of code than possible in languages such as C++ or Java.
+#     The language provides constructs intended to enable writing clear programs on both a small and large scale.
+#     Python supports multiple programming paradigms, including object-oriented, imperative and functional programming or procedural styles.
+#     It features a dynamic type system and automatic memory management and has a large and comprehensive standard library.
+#     Python interpreters are available for many operating systems, allowing Python code to run on a wide variety of systems.
+#     Using third-party tools, such as Py2exe or Pyinstaller, Python code can be packaged into stand-alone executable programs for some of the most popular operating systems, so Python-based software can be distributed to, and used on, those environments with no need to install a Python interpreter.
+#     Above description was taken from wikipedia: https://en.wikipedia.org/wiki/Python_(programming_language)"""
+#
+#     list_item = xbmcgui.ListItem(path=path)
+#     list_item.setInfo('video', {'title': name, 'plot': plot})
+#     list_item.setArt({'thumb': icon})
+#     xbmcplugin.setResolvedUrl(addon_handle, True, listitem=list_item)
 
 if action is None:
     main_menu()
 
 elif action == 'play':
 
-    stream = YDStreamExtractor.getVideoInfo(params['url'])
-    url = stream.streamURL()
-    title = stream.selectedStream()['title']
-    thumb = stream.selectedStream()['thumbnail']
-    #plot = stream.selectedStream()['description']
-    play_item(url, title, thumb)
+    execute('PlayMedia("{0}")'.format(params['url']))
+
+#     stream = YDStreamExtractor.getVideoInfo(params['url'])
+#     url = stream.streamURL()
+#     title = stream.selectedStream()['title']
+#     thumb = stream.selectedStream()['thumbnail']
+#     #plot = stream.selectedStream()['description']
+#     play_item(url, title, thumb)
 
 elif action == 'pycheat':
 

@@ -1,3 +1,7 @@
+[B]1.2.2 (24-Nov-2016)[/B]
+- Utilizing youtube addon for streams & removed youtube-dl
+- Made Isengard+ compatible.
+
 [B]1.2.1 (08-Nov-2016)[/B]
 - Removed urlresolver and used youtube-dl instead. Faster resolving
 - Re-fixed full screen video titling and thumbnail.
