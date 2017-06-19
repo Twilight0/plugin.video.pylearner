@@ -1,3 +1,13 @@
+[B]2.1.0 (19-Jun-2017)[/B]
+- New location of playlists
+- Removed redundant youtube addon install function
+
+[B]2.0.0 (29-Dec-2016)[/B]
+- Introduced set of videos & playlists in greek language
+- Youtube Keys setup function
+- Code cosmetics
+- Title Colourization
+
 [B]1.2.2.1 (24-Nov-2016)[/B]
 - Minor bug fix once again for direct playable videos
 
