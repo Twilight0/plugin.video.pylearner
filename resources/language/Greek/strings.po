@@ -15,5 +15,73 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgctxt "#30001"
+msgid "General"
+msgstr "Γενικά"
+
+msgctxt "#30002"
+msgid "Language Selector for set of playlists"
+msgstr "Επιλογή Γλώσσας για τα σετ λιστών αναπαραγωγής"
+
+msgctxt "#30003"
+msgid "English"
+msgstr "Αγγλικά"
+
+msgctxt "#30004"
+msgid "Greek"
+msgstr "Ελληνικά"
+
+msgctxt "#30005"
+msgid "Actions"
+msgstr "Ενέργειες"
+
+msgctxt "#30006"
+msgid "Youtube API Keys Setup"
+msgstr "Ρύθμιση κλειδιών του Youtube API"
+
+msgctxt "#30007"
+msgid "This action will overwrite existing Youtube API keys and will log you out if already logged in"
+msgstr "Αυτή η ενέργεια θα τροποποιήσει υπάρχουσες ρυθμίσεις των κλειδιών του Youtube και θα σας βγάλει εκτός συνδεδεμένης κατάστασης"
+
+msgctxt "#30008"
+msgid "Proceed?"
+msgstr "Εκτέλεση;"
+
+msgctxt "#30009"
+msgid "Success"
+msgstr "Επιτυχία"
+
+msgctxt "#30010"
+msgid "Cancelled"
+msgstr "Ακύρωση"
+
+msgctxt "#30011"
+msgid "This action will log you out if already logged in"
+msgstr "Αυτή η ενέργεια θα σας βγάλει εκτός συνδεδεμένης κατάστασης"
+
+msgctxt "#30012"
+msgid "This action will install and setup Youtube addon"
+msgstr "Αυτή η ενέργεια θα εγκαταστήσει και θα ρυθμίσει το πρόσθετο Youtube"
+
+msgctxt "#30013"
+msgid "Keys setup"
+msgstr "Ρύθμιση κλειδιών"
+
+msgctxt "#30014"
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+msgctxt "#30015"
+msgid ""
+msgstr ""
+
+msgctxt "#30016"
+msgid ""
+msgstr ""
+
+msgctxt "#30017"
+msgid ""
+msgstr ""
+
+msgctxt "#30018"
 msgid ""
 msgstr ""
